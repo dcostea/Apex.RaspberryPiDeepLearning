@@ -1,0 +1,13 @@
+birds
+dog
+girlandcar
+house
+pen
+intersection
+manypets
+girlanddog
+cars
+family
+cowhorse
+room
+street

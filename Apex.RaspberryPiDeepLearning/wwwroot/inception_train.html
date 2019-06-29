@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Learning</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/site.css" />
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/inception_train.js" asp-append-version="true"></script>
+</head>
+<body>
+    <div class="container body-content inception-train">
+        <h1>Inception Train &amp; Predict (Tensorflow)</h1>
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="inception.html">Inception Score (Tensorflow)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="inception_train.html">Inception Train &amp; Predict (Tensorflow)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="yolo.html">Yolo (ONNX)</a>
+                </li>
+            </ul>
+        </div>
+        <hr />
+        <h2>Training</h2>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <!--<input type="text" id="train_name" placeholder="train object name" value="train" class="form-control form-control-sm col-5 float-left" />-->
+                <!--<input type="button" id="capture_train_image" value="Capture training image!" class="btn btn-sm btn-info col-7 float-left" />-->
+            </div>
+            <div class="col-8">
+                <div id="train_images">
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <input type="button" id="train" class="btn btn-primary btn-lg" value="Train the model!" />
+            </div>
+            <div class="col-4">
+                <h4 id="train_status"></h4>
+            </div>
+        </div>
+        <hr />
+        <h2>Predicting</h2>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <input type="text" id="test_name" placeholder="test object name" value="test" class="form-control form-control-sm col-5 float-left" />
+                <input type="button" id="capture_test_image" value="Capture testing image!" class="btn btn-sm btn-info col-7 float-left" />
+            </div>
+            <div class="col-8">
+                <div id="test_images">
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-12">
+                <ul id="objects" class="list-inline"></ul>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <input type="button" id="predict_test_image" class="btn btn-success btn-lg" value="Predict image!" />
+                <br />
+                <h4 id="test_status"></h4>
+            </div>
+            <div class="col-8">
+                <img id="test_image" class="img-fluid img-thumbnail m-2" src="" />
+            </div>
+        </div>
+    </div>
+
+    <img id="loading" src="loading.gif" class="img-thumbnail" alt="loading..." />
+</body>
+</html>
+
+
+
+
